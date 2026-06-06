@@ -1,27 +1,36 @@
-Analyse und Regelung mechatronischer Mehrgrößensysteme
-Dieses Repository enthält die Modellierung und den Reglerentwurf für komplexe mechatronische Systeme. 
-Das Projekt ist in zwei Schwerpunkte unterteilt: die statische/dynamische Entkopplung von Mehrgrößensystemen (MIMO) und die zeitdiskrete Zustandsregelung instabiler Strecken.
+## :sparkles:**Function**
+**Analysis and Control of Mechatronic Multi-Variable Systems**
+This repository contains the modeling and controller design for complex mechatronic systems. The project is divided into two main areas of focus: the static/dynamic decoupling of multi-input multi-output (MIMO) systems and the discrete-time state-space control of unstable plants.
 
-Teil 1: Entkopplung von Mehrgrößensystemen (MIMO)
-Im ersten Teil wird ein System mit mehreren Ein- und Ausgängen ( ein Handhabungsgerät mit Linear- und Rotationsachse) untersucht. 
-Ohne Korrektur beeinflussen sich die Achsen gegenseitig, was eine präzise Steuerung erschwert.
+---
 
-Umsetzung: 
+## **Part 1: Decoupling of Multi-Variable (MIMO) Systems**
+The first part investigates a system with multiple inputs and outputs (a handling device featuring a linear and a rotational axis). Without correction, the axes interfere with each other, making precise control difficult.
 
-Systemanalyse: Bestimmung der Kopplungen zwischen den Ein- und Ausgängen in der Übertragungsmatrix.
-Entkopplungsnetzwerk: Berechnung und Implementierung einer Entkopplungsmatrix, sodass jede Eingangsgröße exklusiv auf die zugehörige Ausgangsgröße wirkt.
+**Implementation:**
 
-Teil 2: Zustandsregelung und Zeitdiskrete Implementierung
+* **System Analysis:** Determination of the cross-couplings between the inputs and outputs within the transfer matrix.
 
-Der zweite Teil fokussiert sich auf die Stabilisierung eines instabilen Systems (inverses Pendel auf einem Wagen). 
-Hierbei wird ein moderner regelungstechnischer Ansatz im Zustandsraum gewählt
+* **Decoupling Network:** Calculation and implementation of a decoupling matrix so that each input variable acts exclusively on its corresponding output variable.
 
-Kernaspekte des Entwurfs:
+---
 
-Zustandsrückführung: Berechnung der Rückführmatrix zur gezielten Polvorgabe, um das System zu stabilisieren und Anforderungen an die Dynamik (Einschwingzeit, Überschwingen) zu erfüllen.
-Zeitdiskrete Regelung: Da reale Steuerungen auf Mikrocontrollern laufen, wurde der Regler unter Berücksichtigung einer festen Abtastzeit diskretisiert.
-Regler ohne Beobachter: In diesem Szenario wird davon ausgegangen, dass alle Zustandsgrößen (Positionen und Geschwindigkeiten) direkt messbar sind oder durch einfache Differentiation gewonnen werden, 
-sodass kein Luenberger-Beobachter benötigt wird.
+## **Part 2: State-Space Control and Discrete-Time Implementation**
+The second part focuses on stabilizing an unstable system (an inverted pendulum on a cart). For this purpose, a modern state-space control approach was chosen.
+
+**Core Aspects of the Design:**
+
+:white_check_mark:**State Feedback:** Calculation of the feedback matrix for targeted pole placement in order to stabilize the system and meet dynamic performance requirements (settling time, overshoot).
+
+:white_check_mark:**Discrete-Time Control:** Since real-world controllers run on microcontrollers, the controller was discretized taking a fixed sampling time into account.
+
+:white_check_mark:**Controller without Observer:** In this scenario, it is assumed that all state variables (positions and velocities) are directly measurable or can be obtained through simple differentiation, eliminating the need for a Luenberger observer.
+
+---
+
+## :man_technologist: **Autor**
+**Ezechiel Tonkeme**
+
 
 
 <img width="600" height="340" alt="image" src="https://github.com/user-attachments/assets/b1c95e7e-f03d-4152-bff0-c3b789d6b15b" />
