@@ -28,7 +28,7 @@ The second part focuses on stabilizing an unstable system (an inverted pendulum 
 
 ---
 
-## :man_technologist: **Autor**
+## :man_technologist: **Author**
 **Ezechiel Tonkeme**
 
 
